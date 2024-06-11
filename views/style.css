@@ -2,14 +2,13 @@ body {
   background-color: #1de058;
   background-attachment: fixed;
   background-position: center;
-  background-repeat: no-repeat;
   background-size: 100%;
 }
 
 nav {
   color: red;
   position: absolute;
-  left: 600px;
+  left: 800px;
   font-style: light;
 }
 
