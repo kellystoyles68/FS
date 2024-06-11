@@ -43,8 +43,8 @@ const server = http.createServer((req, res) => {
   let filePath = "./views" + req.url;
   if (req.url === "/") {
     filePath = "./views/index.html";
-  } else if (req.url === "/styles.css") {
-    filePath = "./views/styles.css";
+  } else if (req.url === "/style.css") {
+    filePath = "./views/style.css";
     res.setHeader("Content-Type", "text/css");
   }
 
