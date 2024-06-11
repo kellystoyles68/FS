@@ -20,31 +20,37 @@ const server = http.createServer((req, res) => {
       path += "index.html";
       res.statusCode = 200;
       console.log(req.url);
+      console.log("index is working");
       break;
     case "/about":
       path += "about.html";
       res.statusCode = 200;
       console.log(req.url);
+      console.log("about is working");
       break;
     case "/products":
       path += "products.html";
       res.statusCode = 200;
       console.log(req.url);
+      console.log(" products is working but not the images");
       break;
     case "/contact":
       path += "contact.html";
       res.statusCode = 200;
       console.log(req.url);
+      console.log("contact is working");
       break;
     case "/subscribe":
       path += "subscribe.html";
       res.statusCode = 200;
       console.log(req.url);
+      console.log("subscribe is working");
       break;
     default:
       path += "404.html";
       res.statusCode = 404;
       console.log(req.url);
+      console.log("404 is working");
       break;
   }
 
