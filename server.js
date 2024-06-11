@@ -2,6 +2,33 @@
 
 const http = require("http");
 const fs = require("fs");
+const EventEmitter = require("events");
+const MyEmitter = new EventEmitter();
+
+//Add an event emitter
+MyEmitter.on("event", () => {
+  console.log("an event occurred!");
+});
+MyEmitter.emit("event");
+
+//Add a 'keydown' event
+MyEmitter.on("keydown", () => {
+  console.log("keydown");
+});
+MyEmitter.emit("keydown");
+
+// Add an error event
+MyEmitter.on("error", (err) => {
+  console.log(err);
+});
+MyEmitter.emit("error", "Something went wrong");
+console.log("Listeners for 'error':", MyEmitter.listeners("error"));
+
+// Add a listeners count
+MyEmitter.on("listeners", (num) => {
+  console.log(`There are ${num} listeners now.`);
+});
+MyEmitter.emit("listeners", MyEmitter.listenerCount("event"));
 
 const server = http.createServer((req, res) => {
   // res.setHeader("Content-Type", "text/plain");
@@ -51,6 +78,7 @@ const server = http.createServer((req, res) => {
       res.statusCode = 404;
       console.log(req.url);
       console.log("404 is working");
+      MyEmitter.emit("error", "Something went wrong");
       break;
   }
 
