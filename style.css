@@ -1,0 +1,72 @@
+body {
+  background-color: #e6e6e6;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+header {
+  width: 100%;
+  height: 200px;
+  background-color: #003366;
+  border-style: solid;
+  border: 2px;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+footer {
+  background-color: #003366;
+  height: 130px;
+  width: 100%;
+  margin-top: 10px;
+}
+
+li::before {
+  content: "\1f41f";
+  margin-right: 5px;
+}
+
+.About_Us {
+  background-color: white;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  padding-top: 35px;
+  font-size: 65px;
+  font-style: bold, center;
+  font-family: Papyrus Light;
+  font-family: cursive;
+}
+
+bold {
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 33px;
+  font-family: Papyrus Light;
+  font-family: cursive;
+}
+h2 {
+  font-size: 24px;
+  font-family: Papyrus Light;
+}
+h3 {
+  font-size: 22px;
+  font-family: Papyrus Light;
+}
+h4 {
+  font-size: 15px;
+  font-family: Papyrus Light;
+  font-style: italic;
+}
+
+text {
+  font-size: 15px;
+  font-family: Papyrus Light;
+}
