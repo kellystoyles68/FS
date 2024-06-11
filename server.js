@@ -40,11 +40,11 @@ const server = http.createServer((req, res) => {
   res.setHeader("Content-Type", "text/html");
 
   // setting up basic routing (routes) with status code
-  let filePath = "./views" + req.url;
+  let path = "./views" + req.url;
   if (req.url === "/") {
-    filePath = "./views/index.html";
+    path = "./views/index.html";
   } else if (req.url === "/style.css") {
-    filePath = "./views/style.css";
+    path = "./views/style.css";
     res.setHeader("Content-Type", "text/css");
   }
 
